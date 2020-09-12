@@ -22,7 +22,9 @@ let gulp = require('gulp'),
   return gulp.src([
     'node_modules/normalize.css/normalize.css',
     'node_modules/slick-carousel/slick/slick.css',
-    'node_modules/magnific-popup/dist/magnific-popup.css'
+    'node_modules/magnific-popup/dist/magnific-popup.css',
+    // 'node_modules/rateyo/lib/cjs/rateyo.css',
+    // 'node_modules/rateyo/lib/cjs/jquery.rateyo.css'
   ])
       .pipe(concat('libs.min.css'))
       .pipe(cssmin())
@@ -32,7 +34,9 @@ let gulp = require('gulp'),
 gulp.task('script', function(){
   return gulp.src([
     'node_modules/slick-carousel/slick/slick.js',
-    'node_modules/magnific-popup/dist/jquery.magnific-popup.js'
+    'node_modules/magnific-popup/dist/jquery.magnific-popup.js',
+    'node_modules/mixitup/dist/mixitup.js',
+    // 'node_modules/rateyo/lib//cjs/rateyo.js'
   ])
       .pipe(concat('libs.min.js'))
       .pipe(uglify())
